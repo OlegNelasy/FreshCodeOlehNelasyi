@@ -65,17 +65,26 @@ p {
 }
 
 #section-3 {
-    display: table;
+    /* display: table; */
     /* width: 100%; */
     /* table-layout: fixed;  */
     /* Жестко фиксируем ширину колонок, чтобы они были строго равны */
+
+    column-count: 3;      /* количество колонок */
+    column-width: 300px;  
+    column-gap: 0;        /* уберает отступы между колонками */
+
+    text-align: left;
 }
 
 #section-3 > div {
-    display: table-cell; /* Делаем div-ы "ячейками" таблицы */
-    width: 33.3333%; /* Каждому ровно по трети экрана */
+    /* display: table-cell; /* Делаем div-ы "ячейками" таблицы */
+    /* width: 33.3333%; Каждому ровно по трети экрана */ 
+
+    break-inside: avoid;  /* Очень важное свойство! Запрещает браузеру "разрывать" один div на две разные колонки */
+    /* box-sizing: border-box; */
+    
     padding: 20px; 
-    text-align: left;
 }
 
 #section-3 > div:first-child,
