@@ -86,8 +86,13 @@ p {
     padding: 20px; 
 }
 
-#section-3 > div:first-child,
+/* #section-3 > div:first-child,
 #section-3 > div:last-child {
+    background-color: var(--main-color); 
+    color: var(--main-color-alternative);
+} */
+
+#section-3 > :nth-child(odd) {
     background-color: var(--main-color); 
     color: var(--main-color-alternative);
 }
