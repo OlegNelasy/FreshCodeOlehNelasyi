@@ -11,7 +11,7 @@
 
 body {
     color: var(--main-color);
-    background: var(--main-color-alternative);
+    background-color: var(--main-color-alternative);
     text-align: center;
 }
 
@@ -52,6 +52,7 @@ p {
     top: 50%; 
     left: 50%; /* сдвигаю контент отнасительно родителоя ровно на середину */
     transform: translate(-50%, -50%); /* выравниваю блок относительно своего размера таки образом в сочитании с лефт и топ полкчаю равно позиционирование по середине отнасительно родителя по вертикали и горизонтали. */
+    padding: 0 20px;
 }
 
 #section-1 {
@@ -82,8 +83,6 @@ p {
     /* width: 33.3333%; Каждому ровно по трети экрана */ 
 
     break-inside: avoid;  /* Очень важное свойство! Запрещает браузеру "разрывать" один div на две разные колонки */
-    /* box-sizing: border-box; */
-    
     padding: 20px; 
 }
 
@@ -97,7 +96,6 @@ p {
     background-color: #dcedc8; 
 } */
 
-/* 5. Стили для самого абзаца внутри центральной колонки (синий прямоугольник) */
 /* #section-3 > div:nth-child(2) p {
     padding: 20px;  
     margin: 0; 
