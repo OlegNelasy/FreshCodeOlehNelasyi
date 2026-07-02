@@ -18,12 +18,9 @@ body {
     background: var(--main-color);
 }
 
-header {
+.main-header {
     display: flex;
     justify-content: center;
-}
-
-main {
 }
 
 .headerBody {
@@ -53,7 +50,11 @@ main {
     flex-direction: column;
 }
 
-.headerContent > * {
+/* .headerContent > * {
+    margin: 10px;
+} */
+
+.header-indent {
     margin: 10px;
 }
 
@@ -81,7 +82,11 @@ main {
     flex-direction: column; 
     padding: 20px;
 }
-.section-1 > * {
+/* .section-1 > * {
+    padding: 20px;
+} */
+
+.section-1-indent {
     padding: 20px;
 }
 
@@ -106,18 +111,23 @@ main {
     background-color: var(--main-color-alternative);
     color: var(--main-color);
     max-width: 280px;
+    width: 100%;
 }
 
-.card > * {
+/* .card > * {
+    margin-bottom: 40px;
+} */
+
+.card-indent {
     margin-bottom: 40px;
 }
 
-.card > img {
+.card-img {
     width: 100%; 
     display: block;  
 }
 
-.card > p, .card > h3 {
+.card-p, .card-h3 {
     padding: 0 20px;
 }
 
@@ -131,7 +141,12 @@ main {
     padding: 30px;
 }
 
-.section-3 > h2, .section-3 > p {
+/* .section-3 > h2, .section-3 > p {
+    max-width: var(--defolt-width-content);
+    margin: 25px 0;
+} */
+
+.section-3-h2, .section-3-p{
     max-width: var(--defolt-width-content);
     margin: 25px 0;
 }
@@ -149,7 +164,7 @@ main {
     padding: 40px;
 }
 
-.contact > a {
+.contact-link {
     text-decoration: none; 
     color: var(--main-color-alternative);
 }
@@ -159,11 +174,15 @@ main {
     padding: 30px;
 }
 
-.contact > *, .about-company > * {
+/* .contact > *, .about-company > * {
     margin: 50px 0;
-} 
+}  */
 
-footer {
+.section-4-indent{
+    margin: 50px 0;
+}
+
+.main-footer {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -179,7 +198,7 @@ footer {
     gap: 5px;                
 }
 
-.Project-By a {
+.Project-By-link {
     text-decoration: none;
     color: #2690d4; 
 }
