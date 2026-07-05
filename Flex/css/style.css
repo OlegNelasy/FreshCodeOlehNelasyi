@@ -99,6 +99,10 @@ body {
     
 }
 
+.section-1-p {
+    padding: 0 10px;
+}
+
 .section-2 {
     background-color: var(--main-color);
     display: flex;
@@ -151,6 +155,7 @@ body {
 .section-3-h2, .section-3-p{
     max-width: var(--defolt-width-content);
     margin: 25px 0;
+    padding: 0 10px;    
 }
 
 .section-4 {
@@ -200,10 +205,14 @@ body {
     display: flex;
     justify-content: center; 
     align-items: center;     
-    gap: 5px;                
+    gap: 5px;               
 }
 
 .Project-By-link {
     text-decoration: none;
-    color: #2690d4; 
+    color: #2690d4;     
+}
+
+.main-footer-indent {
+    padding: 0 10px;    
 }
