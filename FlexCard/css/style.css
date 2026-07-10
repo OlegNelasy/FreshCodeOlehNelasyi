@@ -1,0 +1,275 @@
+body {
+    display: flex;
+    justify-content: center;
+    background: blue url(https://abrakadabra.fun/uploads/posts/2022-01/1642608884_1-abrakadabra-fun-p-bekgraund-dlya-igri-2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.contentMain {
+    /* border: 1px solid white; */
+    /* max-width: 1200px;
+    min-width: 1200px; */
+    max-width: 1230px;
+    /* min-height: 100px; */
+}
+
+.section1 {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-start;
+    
+}
+
+.card {
+    width: 300px;
+    /* min-height:400px; */
+    /* border: 1px solid green; */
+    /* color: white; */
+    background-color: white;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25 );
+    flex-basis: 300px;
+    flex-shrink: 0;
+    margin-bottom: 10px;
+}
+
+.card:hover {
+    box-shadow: 0px 10px 30px rgba(255, 255, 255, 0.25);
+}
+
+.infoProfessionCountry {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: gray;
+    /* flex-direction: row; */
+    gap: 8px;
+}
+
+.info {
+    text-align: center;
+    font-weight: bold;
+    padding: 25px 10px;
+}
+
+.infoh2 {
+    font-size: 22px;
+    margin: 10px 0;
+}
+
+.stats {
+    display: flex; 
+    width: 100%;
+    border-top: 1px solid lightgray;
+}
+
+.statItem {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    padding: 15px 0;
+    color: gray;        
+}
+
+.statItem:not(:last-child) {
+    border-right: 1px solid lightgray;
+}
+
+.statValue {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.statLabel {
+    font-size: 14px;
+}
+
+.photoWrapper {
+    position: relative;
+}
+
+.profilePhoto {
+    /* border-top-left-radius: inherit;
+    border-top-right-radius: inherit; */
+    width: 100%;
+    height: 200px; 
+    object-fit: cover;
+    display: block;
+}
+
+.genderIcon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: lightgray;
+    font-size: 20px;
+}
+
+/* Стили для желтой кнопки */
+.btn {
+    position: absolute;
+
+    bottom: -25px; 
+    right: 30px;
+    
+    width: 50px;
+    height: 50px;
+    background-color: #f7d82b; 
+    color: #333;
+    border: none;
+    border-radius: 50%;
+    font-size: 25px;
+    
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+}
+
+.btn:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.55);
+}
+
+.btn:active {
+    color: white;
+}
+
+
+.card2 {
+    width: 300px;
+    min-height:400px;
+    /* border: 1px solid green; */
+    /* color: white; */
+    /* background-color: white; */
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25 );
+    flex-basis: 300px;
+    flex-shrink: 0;
+    margin-bottom: 10px;
+}
+
+.card2:hover {
+    box-shadow: 0px 10px 30px rgba(255, 255, 255, 0.25);
+}
+
+.topConntent {
+    position: relative;
+    min-height:250px;
+    width: 100%;
+    color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(12, 1, 59, 0.651);
+    text-align: center;
+    padding: 35px 25px;
+}
+
+.conntainerImg {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 8px;
+}
+
+.profilePhoto2 {
+    /* border-top-left-radius: inherit;
+    border-top-right-radius: inherit; */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 50%;
+}
+
+.imgContent {
+    display: flex;
+    justify-content: space-between;
+    /* padding: 25px; */
+}
+
+.icon:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.topConntentH2 {
+    color: whitesmoke;
+    font-size: 22px;
+    margin-top: 20px;
+}
+
+.actionBtn {
+    position: absolute;
+    right: 30px;
+    bottom: -25px; 
+    
+    width: 50px;
+    height: 50px;
+    background-color: #55c8ff; 
+    color: white;
+    /* border: none; */
+    border-radius: 50%;
+    font-size: 20px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    cursor: pointer;
+    /* box-shadow: 0 4px 10px rgba(85, 200, 255, 0.4); */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+}
+
+.actionBtn:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.55);
+}
+
+.actionBtn:active {
+    color: black;
+}
+
+.bottomContent {
+    background-color: white;
+    display: flex;
+    padding: 40px 20px 20px; 
+    color: #333;
+}
+
+.statItem2 {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.statItem2:not(:last-child) {
+    border-right: 1px solid lightgray;
+}
+
+.statValue2 {
+    font-size: 26px;
+    font-weight: 300; 
+}
+
+.statLabel2 {
+    font-size: 10px;
+    color: grey;
+    margin-top: 5px;
+    letter-spacing: 1px; 
+}
+
+
+
+
+
+
