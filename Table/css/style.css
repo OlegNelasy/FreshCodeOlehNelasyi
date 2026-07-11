@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    border: 5px solid red;
+    /* border-collapse: collapse; */
+    /* border-spacing: 10px; */
+    text-align: center;
+}
+
+td, th{
+   border: 2px solid blue;
+   padding: 5px;
+}
+
+thead{
+    background-color: lightgoldenrodyellow;
+}
+
+tfoot
+{
+    background-color: lightpink;
+}
+
+.tr-content {
+    background-color: rgb(193, 201, 120);
+    /* min-width: 200px; */
+}
+
+.tr-content-alternative {
+    background-color: lightgrey;
+    /* min-width: 500px; */
+}
+
+.number-td {
+    background-color: aqua;
+    min-width: 50px;
+}
+
+.cell-width {
+    min-width: 200px;
+}
