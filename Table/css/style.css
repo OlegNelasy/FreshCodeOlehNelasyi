@@ -9,6 +9,10 @@ body {
     justify-content: center;
 }
 
+tr:hover {
+    background-color: yellow;
+}
+
 table {
     border: 5px solid red;
     /* border-collapse: collapse; */
@@ -45,6 +49,14 @@ tfoot
     min-width: 50px;
 }
 
+/* .number-td:hover {
+    background-color: yellow;
+} */
+
 .cell-width {
     min-width: 200px;
 }
+
+/* tr:hover, .number-td:hover {
+    background-color: yellow;
+} */
