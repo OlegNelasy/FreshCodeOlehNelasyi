@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Fontdiner Swanky';
-    src: url('./../Material/Font/fontdiner-swanky.ttf') format('ttf'); 
+    src: url('../Material/Font/fontdiner-swanky.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -9,7 +9,7 @@
 * {
     margin: 0;
     padding: 0;
-    background-origin: padding-box;
+    box-sizing: border-box; 
 }
 
 a {
@@ -21,7 +21,7 @@ body {
 }
 
 .logo {
-    font-family: 'Fontdiner Swanky', cursive; 
+    font-family: 'Fontdiner Swanky', serif; 
     font-size: 40px; 
     color: white; 
 }
@@ -48,7 +48,8 @@ body {
     text-transform: uppercase;
     font-weight: bold;
     font-family: sans-serif;
-    margin: 20px;
+    /* margin: 20px; */
+    padding: 20px;
 }
 
 .btn {
@@ -74,7 +75,8 @@ body {
          align-items: start;
     }
     .nav-link:first-child {
-    margin-left: 0;
+    /* margin-left: 0; */
+    padding-left: 0;
     }
 }
 
@@ -83,6 +85,7 @@ body {
         flex-direction: column;
     }
     .nav-link {
-    margin-left: 0;
+    /* margin-left: 0; */
+    padding-left: 0;
     }
 }
