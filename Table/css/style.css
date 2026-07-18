@@ -9,9 +9,14 @@ body {
     justify-content: center;
 }
 
-tr:hover {
+/* tr:hover {
     background-color: yellow;
-}
+} */
+
+/* tr:hover td, 
+tr:hover th {
+    background-color: yellow;
+} */
 
 table {
     border: 5px solid red;
@@ -34,29 +39,30 @@ tfoot
     background-color: lightpink;
 }
 
-.tr-content {
+tbody tr:nth-child(odd) {
     background-color: rgb(193, 201, 120);
-    /* min-width: 200px; */
 }
 
-.tr-content-alternative {
+
+tbody tr:nth-child(even) {
     background-color: lightgrey;
-    /* min-width: 500px; */
 }
 
-.number-td {
+/* .number-td {
+    background-color: aqua;
+    min-width: 50px;
+} */
+
+.table-body tr > td:first-child {
     background-color: aqua;
     min-width: 50px;
 }
 
-/* .number-td:hover {
+.table-body tr:hover td, 
+.table-body tr:hover th {
     background-color: yellow;
-} */
+}
 
 .cell-width {
     min-width: 200px;
 }
-
-/* tr:hover, .number-td:hover {
-    background-color: yellow;
-} */
