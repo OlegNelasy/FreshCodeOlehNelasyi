@@ -249,10 +249,25 @@ body {
 
 @media (max-width: 620px) {
     .h1-text {
-        display: none;
+        /* display: none; */
+        position: absolute;
+        overflow: hidden;
+        width: 0;
+        height: 0;
+        padding: 0;
+        margin: 0;
+        white-space: nowrap;
     }
 
     .nav-block{
-        display: none;
+        /* display: none; */
+        position: absolute;
+        /* top: -200px; */
+        overflow: hidden;
+        width: 0;
+        height: 0;
+        padding: 0;
+        margin: 0;
+        white-space: nowrap;
     }
 }
