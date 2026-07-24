@@ -30,7 +30,9 @@ else
     }
     else discount = 0; //я бы не ставил конкретно для этой задачи поскольку если условие не выпонилось то у нас будет 0 присвоиный при иницыальзации переменой но на занятии сказали надо значать надо discount = 0;
 
-    if(totalCost > 1000)
+    сostWithDiscount = totalCost * (1 - discount);
+
+    if(сostWithDiscount > 1000)
     {
         сostDelivery = 0;
     }    
@@ -46,8 +48,6 @@ else
     {
         сostDelivery = 0; // тут тоже можно без этого условия
     }
-
-    сostWithDiscount = totalCost * (1 - discount);
 
     console.log("Стоимость заказа составляет: " + (сostWithDiscount + сostDelivery).toFixed(2));
     console.log("Скидка: " + discount * 100 + "%");
