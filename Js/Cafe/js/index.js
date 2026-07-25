@@ -1,14 +1,12 @@
 const ORDER = Number(prompt("Сделайте заказ: \n 1 Чай (50 грн); \n 2 Кофе (70 грн) \n 3 Сок (60 грн) \n 4 Вода (30 грн) \n Для выбора введите число от 1 до 4!"));
-const SIZE = Number(prompt("Выберите размер напитка: \n 1 S (Small) (0 грн); \n 2 M (Medium) (15 грн) \n 3 L (Large) (30 грн) \n Для выбора введите число от 1 до 3!"));
+const SIZE = prompt("Выберите размер напитка: \n S (Small) 0 грн; \n M (Medium) 15 грн \n L (Large) 30 грн \n Для выбора введите букву S M L");
 const COUNTS_DRINKS = Number(prompt("Введите желаемое количество напитка"));
 
 let drink;
 let price;
-let sizeName;
-// let countsDrinks; 
 
 if(Number.isNaN(ORDER) || ORDER <= 0 || ORDER > 4
-    || Number.isNaN(SIZE) || SIZE <= 0 || SIZE > 3
+    || SIZE === null || (SIZE !== "S" && SIZE !== "M" && SIZE !== "L")
     || COUNTS_DRINKS <= 0) {
     console.log("Данные указаны некорректно");
 }
@@ -38,16 +36,13 @@ else {
     }
 
      switch (SIZE) {
-        case 1:
-            sizeName = "S";
+        case "S":
             break;
-        case 2:
+        case "M":
             price += 15;
-            sizeName = "M";
             break;
-        case 3:
+        case "L":
             price += 30;
-            sizeName = "L";
             break;
         
         default:
@@ -56,7 +51,7 @@ else {
     }
 
     console.log("Напиток: " + drink);
-    console.log("Размер: " + sizeName);
+    console.log("Размер: " + SIZE);
     console.log("Количество: " + COUNTS_DRINKS);
     console.log("Стоимость за 1 шт. " + price);
     console.log("К оплате: " + price * COUNTS_DRINKS);
