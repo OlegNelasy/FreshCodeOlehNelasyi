@@ -6,10 +6,9 @@ const STUDENTS_NAMBER_COURCE = Number(prompt("Введите номер курс
 const STUDENTS_AVEREGE_SCORE = Number(prompt("Введите средний балл студента"));
 const STUDENTS_PERCENTAGE_COMPLETE_PROGRAM = Number(prompt("Введите на сколько завершено програма от 0 до 100!"));
 
-let isStudent = false;
-let isMentor = false;
-
-let hasPaid = false; //тут перед запуска укажите тру или фолс по статусу студнт оплатил учебу или нет!!!
+const isStudent = STATUS_WHO_REQUESTING === 2;
+const isMentor = STATUS_WHO_REQUESTING === 1;
+const hasPaid = false; //тут перед запуска укажите тру или фолс по статусу студнт оплатил учебу или нет!!!
 
 if(STUDENTS_NAME === null 
     || STUDENTS_NAME.trim() === ""
@@ -33,29 +32,23 @@ if(STUDENTS_NAME === null
     // || STUDENTS_PERCENTAGE_COMPLETE_PROGRAM === null
     || STUDENTS_PERCENTAGE_COMPLETE_PROGRAM < 0
     || STUDENTS_PERCENTAGE_COMPLETE_PROGRAM > 100
-    ) 
-{
+    ) {
     console.log("Данные введены не коректно!!!");
-}
-else
-{
-    if(STATUS_WHO_REQUESTING === 1 || (STATUS_WHO_REQUESTING === 2 && hasPaid))
-    {
+} else {
+    if(isMentor || (isStudent && hasPaid)) {
         console.log("ФИО: " + STUDENTS_SURNAME + " " + STUDENTS_NAME);
         console.log("Специальнсть: " + STUDENTS_SPECIALTY);
         console.log("Номер курса: " + STUDENTS_NAMBER_COURCE);
         console.log("Средний балл: " + STUDENTS_AVEREGE_SCORE);
 
-        if(STUDENTS_PERCENTAGE_COMPLETE_PROGRAM === 100)
+        if(STUDENTS_PERCENTAGE_COMPLETE_PROGRAM === 100) {
              console.log(STUDENTS_NAME + " Вы завершили программу получите сертификат!");
-        else
+        } else {
             console.log(STUDENTS_NAME + " До завершения программы осталось: " + (100 - STUDENTS_PERCENTAGE_COMPLETE_PROGRAM) + "%");
-
+        }    
         console.log("Тип данных prompt() = " + typeof STUDENTS_NAME);
         console.log("Тип данных Number(prompt()) = " + typeof STUDENTS_NAMBER_COURCE);
-    }
-    else
-    {
+    } else {
         console.log("Вы не оплатили учебу в доступе ОТКАЗАНО!!!");
     }
 }

@@ -12,40 +12,26 @@ if(Number.isNaN(PRODUCT_PRICE)
     || PRODUCT_PRICE <= 0
     || PRODUCT_QUANTITY <= 0
     || DELIVERY < 1 
-    || DELIVERY > 3)
-{
+    || DELIVERY > 3) {
     console.log("Данные указаны некорректно");
-}
-else 
-{
+} else {
     totalCost = PRODUCT_PRICE * PRODUCT_QUANTITY;
 
-    if(totalCost >= 800)
-    {
+    if(totalCost >= 800) {
         discount = 0.05;
-    } 
-    else if (totalCost >= 500)
-    {
+    } else if (totalCost >= 500) {
         discount = 0.03;
-    }
-    else discount = 0; //я бы не ставил конкретно для этой задачи поскольку если условие не выпонилось то у нас будет 0 присвоиный при иницыальзации переменой но на занятии сказали надо значать надо discount = 0;
+    } else discount = 0; //я бы не ставил конкретно для этой задачи поскольку если условие не выпонилось то у нас будет 0 присвоиный при иницыальзации переменой но на занятии сказали надо значать надо discount = 0;
 
     сostWithDiscount = totalCost * (1 - discount);
 
-    if(сostWithDiscount > 1000)
-    {
+    if(сostWithDiscount > 1000) {
         сostDelivery = 0;
-    }    
-    else if (DELIVERY === 3)
-    {
+    } else if (DELIVERY === 3) {
         сostDelivery = 150;
-    } 
-    else if (DELIVERY === 2)
-    {
+    } else if (DELIVERY === 2) {
         сostDelivery = 100;
-    }
-    else if (DELIVERY === 1)
-    {
+    } else if (DELIVERY === 1) {
         сostDelivery = 0; // тут тоже можно без этого условия
     }
 

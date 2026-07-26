@@ -35,7 +35,7 @@ else {
             break;
     }
 
-     switch (SIZE) {
+    switch (SIZE) {
         case "S":
             break;
         case "M":
