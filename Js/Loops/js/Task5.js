@@ -19,6 +19,11 @@ do {
         continue;
     }
 
+    if(Number.isInteger(inputNumber)){
+        console.log(`Ошибка!!! Число не может быть дробным!`);
+        continue;
+    }
+
     countSteps += inputNumber;
 
 } while(true);
