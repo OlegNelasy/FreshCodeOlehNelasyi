@@ -1,3 +1,8 @@
+/**
+ * Проверяет, переданный возраст на работоспособность.
+ * @param {number} age - Проверяемый возраст. 
+ * @returns {boolean} Возвращает true, если возраст работоспособны, и false если возраст неработоспособный.
+ */
 const isWorkingAgePerson = function(age) {
     return age >= 16 && age <= 64;
 };
