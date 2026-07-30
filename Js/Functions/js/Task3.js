@@ -1,3 +1,21 @@
+const figure = 'cylinder';
+const layersCount = 8;
+const length = 6.3;
+const radius = 5;
+const height = 7;
+
+if(figure === 'cube' || figure === 'cylinder'){
+    const area = figure === 'cube' ? calculateSurfaceArea(figure, length) : calculateSurfaceArea(figure, radius, height); 
+
+    if((figure === 'cube' && area !== 0) || (figure === 'cylinder' && area !== 0)){
+        console.log(`Для покраски фигуры ${figure} в ${layersCount} слоев, плошадью ${area} необхожимо приобрести ${calculatePaintBoxes(area, layersCount)} банок краски.`);
+    } else {
+        console.log('Введене не коректные данные!')
+    }
+} else {
+    console.log('Введене не коректная фигура!')
+}
+
 /**
  * Вычисляет площадь поверхности геометрической фигуры (куба или цилиндра).
  * @param {string} shapeType - Тип фигуры ('cube' или 'cylinder').
@@ -39,3 +57,5 @@ function calculatePaintBoxes(area, layersCount = 1) {
 
     return Math.ceil(area * layersCount * 0.1);
 }
+
+
