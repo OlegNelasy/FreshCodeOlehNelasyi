@@ -17,7 +17,7 @@ do {
         continue;
     }
 
-    if((inputNumber > hiddenNumber + 3 || inputNumber < hiddenNumber - 3)){
+    if (Math.abs(inputNumber - hiddenNumber) > 3) {
         console.log(`Холодно`);
     } else if(hiddenNumber === inputNumber){
         console.log(`Число ${hiddenNumber} отгаданно!`);
