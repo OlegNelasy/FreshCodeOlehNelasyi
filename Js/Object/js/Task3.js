@@ -22,10 +22,10 @@ const bookPrototype = {
         return currentYear - this.yearPublication;
     },
     changePrice(newPrice){
-        if (typeof newPrice === 'number' && newPrice > 0) {
+        if (typeof newPrice === 'number' && newPrice >= 0) {
         this.price = newPrice;
         } else {
-            console.log('Ошибка: цена должна быть положительным числом');
+            console.log('Ошибка: цена не должна быть отрицательной числом');
         }
     }
 }
