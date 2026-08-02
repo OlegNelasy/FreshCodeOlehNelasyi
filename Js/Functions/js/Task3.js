@@ -15,6 +15,14 @@ if(figure === 'cube' || figure === 'cylinder'){
 } else {
     console.log('Введене не коректная фигура!')
 }
+/**
+ * Проверяет param
+ * @param {any} param 
+ * @returns Возвращает true если число намбер и не NaN;
+ */
+function checkValidPositiveNumber(param){
+    return typeof param === 'number' && !Number.isNaN(param) && param > 0;
+}
 
 /**
  * Вычисляет площадь поверхности геометрической фигуры (куба или цилиндра).
@@ -24,7 +32,7 @@ if(figure === 'cube' || figure === 'cylinder'){
  * @returns {number} Возвращает площадь поверхности фигуры или 0 в случае некорректных данных.
  */
 function calculateSurfaceArea(shapeType, param1,  param2 = 1) {
-    if(typeof param1 !== 'number' || Number.isNaN(param1) || param1 <= 0){
+    if(!checkValidPositiveNumber(param1)){
         return 0;
     }
 
@@ -32,7 +40,7 @@ function calculateSurfaceArea(shapeType, param1,  param2 = 1) {
         return 6 * param1 ** 2;
     } 
 
-    if(typeof param2 !== 'number' || Number.isNaN(param2) || param2 <= 0){
+     if(!checkValidPositiveNumber(param2)){
         return 0;
     }
     
@@ -50,8 +58,7 @@ function calculateSurfaceArea(shapeType, param1,  param2 = 1) {
  * @returns {number} Количество целых банок краски или 0 при некорректных данных.
  */
 function calculatePaintBoxes(area, layersCount = 1) {
-    if (typeof area !== 'number' || Number.isNaN(area) || area <= 0 ||
-        typeof layersCount !== 'number' || Number.isNaN(layersCount) || layersCount <= 0) {
+    if (!checkValidPositiveNumber(area) || !checkValidPositiveNumber(layersCount)) {
         return 0;
     }
 
