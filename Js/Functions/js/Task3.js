@@ -18,7 +18,7 @@ if(figure === 'cube' || figure === 'cylinder'){
 /**
  * Проверяет param
  * @param {any} param 
- * @returns Возвращает true если число намбер и не NaN;
+ * @returns Возвращает true если число намбер и не NaN и больше 0;
  */
 function checkValidPositiveNumber(param){
     return typeof param === 'number' && !Number.isNaN(param) && param > 0;
