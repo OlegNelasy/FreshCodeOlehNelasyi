@@ -21,8 +21,8 @@ const lastDeleted = numbers.pop();
 console.log(`Удален первый элемент: ${firstDeleted}, Удален последный елемент: ${lastDeleted}`);
 console.log(numbers);
 
-let startNumber = +prompt("Введите число для начала массива:");
-let finishNumber = +prompt("Введите число для конца массива:");
+const startNumber = +prompt("Введите число для начала массива:");
+const finishNumber = +prompt("Введите число для конца массива:");
 
 numbers.unshift(startNumber);
 numbers.push(finishNumber);
