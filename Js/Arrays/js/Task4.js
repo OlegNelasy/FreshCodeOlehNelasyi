@@ -7,11 +7,8 @@ console.log(`newNumbersNoZeros:`, newNumbersNoZero);
 const newNumbersDivide100 = numbers.map(number => number / 100);
 console.log(`newNumbersDivide100:`, newNumbersDivide100);
 
-// const newNumbersCubed = numbers.map(number => number ** 3);
-// console.log(`newNumbersCubed:`, newNumbersCubed);
-
-console.log('Элементы массива, возведенные в куб');
-numbers.forEach((number, index) => console.log(index ,number ** 3)); 
+const newNumbersCubed = numbers.map(number => number ** 3);
+console.log(`newNumbersCubed:`, newNumbersCubed);
 
 const indexSquareEqual100 = numbers.findIndex(number => number ** 2 === 100);
 
