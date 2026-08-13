@@ -23,7 +23,7 @@ class RangeValidator {
         }
 
         if (newTo < this.from) {
-            throw new RangeError('Ошибка!!! to должен быть меньше from');
+            throw new RangeError('Ошибка!!! to должен быть больше from');
         }
 
         this._to = newTo;
