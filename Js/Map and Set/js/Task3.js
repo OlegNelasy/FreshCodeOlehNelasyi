@@ -54,7 +54,7 @@ orders.forEach(el => {
         const userData = userStat.get(el.customer);
         userData.totalAmount += data.amount;
         userData.categories.add(data.category);
-        userData.ordersCount += 1;
+        userData.ordersCount++;
     } else {
         userStat.set(el.customer, { totalAmount: data.amount, categories: new Set([data.category]), ordersCount: 1 });
     }
