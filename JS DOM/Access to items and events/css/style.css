@@ -1,0 +1,77 @@
+body {
+    display: flex;
+    justify-content: center;
+    color: #393a3d;
+    padding: 10px;
+}
+
+.userCard {
+    min-width: 500px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.userNameData {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.userPhoto {
+    width: 150px; 
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.userNickname {
+    color: #8C8D8F;
+}
+
+.userData {
+    padding: 15px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.userContact {
+    padding: 15px;
+}
+
+.userButtons {
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 1fr 5fr 3fr; 
+    gap: 10px;
+}
+
+.btn {
+    background-color: #2C7FA5;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid #265F78;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.userLinks {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0 15px 0;
+}
+
+.userLink {
+    padding: 0 10px;
+    color: #2C7FA5;
+}
+
+.userLink:hover {
+    color: #265F78;
+}
+
+.userLink:not(:last-child) {
+    border-right: 1px solid #2C7FA5;
+}
