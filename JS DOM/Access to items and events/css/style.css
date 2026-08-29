@@ -57,6 +57,14 @@ body {
     cursor: pointer;
 }
 
+.btnLike {
+    color: gray;
+}
+
+.btnLikeActive {
+    color: palevioletred;
+}
+
 .btnActive {
     background-color: #8C8D8F;
     color: black;
