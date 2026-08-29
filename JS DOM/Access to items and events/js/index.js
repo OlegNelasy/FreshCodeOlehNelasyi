@@ -91,7 +91,7 @@ phoneNumber.addEventListener('mouseleave', (e) => {
     e.target.textContent = originalText;
 });
 
-// Показати контакти
+// 5. ✅Показати контакти
 
 // Спочатку email  та номер телефону користувача повинні бути приховані.
 // При натисканні на кнопку «Показати контакти»:
@@ -116,16 +116,44 @@ contactBtn.addEventListener('click', (e) => {
 // Додайте обробники click для посилань Профіль, Публікації та Проєкти.
 // Уявіть, що в застосунку ведеться логування дій користувача. Сформуйте повідомлення про те, яке посилання він натиснув, і виведіть його в консоль.
 
-const userLink = document.querySelectorAll('.userLink');
+// const userLink = document.querySelectorAll('.userLink');
 
-function onClickHendler(e) {
-    console.log(`Пользователь нажал на (${e.target.textContent}) и перещол по (${e.target.getAttribute('href')})`);
-}
+// function onClickHendler(e) {
+//     console.log(`Пользователь нажал на (${e.target.textContent}) и перещол по (${e.target.getAttribute('href')})`);
+// }
 
 // userLink[0].addEventListener('click', onClickHendler);
 // userLink[1].addEventListener('click', onClickHendler);
 // userLink[2].addEventListener('click', onClickHendler);
 
-userLink.forEach((link) => {
-    link.addEventListener('click', onClickHendler);
-});
+// userLink.forEach((link) => {
+//     link.addEventListener('click', onClickHendler);
+// });
+
+// 7. ⭐ Challenge (за бажанням). Делегування подій
+
+// Змініть попередню реалізацію.
+// Замість того щоб додавати окремий обробник події на кожне посилання, додайте один обробник на спільний батьківський елемент.
+// При натисканні на посилання потрібно визначити, яке саме посилання було натиснуто, та вивести його текст у консоль.
+// Використовуйте делегування подій.
+
+// При натисканні на посилання:
+// визначте елемент, на якому відбулася подія;
+// виведіть його текст у консоль;
+// виведіть у консоль event.target та event.currentTarget.
+// Зверніть увагу на різницю між target та currentTarget.
+
+const userLinks = document.querySelector('.userLinks');
+
+function onClickHendler(e) {
+    if (!e.target.classList.contains('userLink')) {
+        return;
+    }
+    console.log(`Пользователь нажал на (${e.target.textContent}) и перещол по (${e.target.getAttribute('href')})`);
+    console.log('Target:', e.target);
+    console.log('Current Target:', e.currentTarget);
+}
+
+userLinks.addEventListener('click', onClickHendler);
+
+
