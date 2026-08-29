@@ -5,7 +5,6 @@
 // При натисканні на кнопку «Підписатися» її текст повинен змінюватися на «Ви підписані».
 // При повторному натисканні текст кнопки повинен повертатися до «Підписатися».
 const subscribeBtn = document.getElementById('subscribeBtn');
-subscribeBtn.textContent = 'Подписаться';
 
 subscribeBtn.addEventListener('click', (e) => {
     const isActive = e.target.classList.toggle('btnActive');
@@ -72,4 +71,22 @@ phoneNumber.addEventListener('mouseleave', (e) => {
     e.target.textContent = originalText;
 });
 
-// console.log(likeBtn);
+// Показати контакти
+
+// Спочатку email  та номер телефону користувача повинні бути приховані.
+// При натисканні на кнопку «Показати контакти»:
+// контакти повинні стати видимими;
+// текст кнопки повинен змінитися на «Приховати контакти».
+// При повторному натисканні контакти повинні знову приховуватися, а текст кнопки — повертатися до «Показати контакти».
+
+const userContactBlock = document.querySelector('.userContact');
+// userContactBlock.classList.toggle('userContactHidden');
+
+const contactBtn = document.getElementById('contactBtn');
+
+contactBtn.addEventListener('click', (e) => {
+    const isbtnActive = e.target.classList.toggle('btnActive');
+    e.target.textContent = isbtnActive ? 'Скрыть контакты' : 'Показать контакты';
+
+    userContactBlock.classList.toggle('userContactHidden');
+});
