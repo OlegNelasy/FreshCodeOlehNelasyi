@@ -90,3 +90,22 @@ contactBtn.addEventListener('click', (e) => {
 
     userContactBlock.classList.toggle('userContactHidden');
 });
+
+// 6. ✅ Робота з подіями
+
+// Додайте обробники click для посилань Профіль, Публікації та Проєкти.
+// Уявіть, що в застосунку ведеться логування дій користувача. Сформуйте повідомлення про те, яке посилання він натиснув, і виведіть його в консоль.
+
+const userLink = document.querySelectorAll('.userLink');
+
+function onClickHendler(e) {
+    console.log(`Пользователь нажал на (${e.target.textContent}) и перещол по (${e.target.getAttribute('href')})`);
+}
+
+// userLink[0].addEventListener('click', onClickHendler);
+// userLink[1].addEventListener('click', onClickHendler);
+// userLink[2].addEventListener('click', onClickHendler);
+
+userLink.forEach((link) => {
+    link.addEventListener('click', onClickHendler);
+});
