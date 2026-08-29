@@ -57,6 +57,12 @@ body {
     cursor: pointer;
 }
 
+.btnActive {
+    background-color: #8C8D8F;
+    color: black;
+    border: 1px solid black;
+}
+
 .userLinks {
     display: flex;
     justify-content: center;
