@@ -73,6 +73,10 @@ body {
     color: palevioletred;
 }
 
+.likeCounter {
+    color: white;
+}
+
 .btnActive {
     background-color: #8C8D8F;
     color: black;

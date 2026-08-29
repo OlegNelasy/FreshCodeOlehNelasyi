@@ -11,16 +11,36 @@ subscribeBtn.addEventListener('click', (e) => {
     e.target.textContent = isActive ? 'Вы подписаны' : 'Подписаться';
 });
 
+// 3. ✅ Вподобання
+
 // Реалізуйте кнопку з іконкою ❤️:
 // у початковому стані сердечко має бути сірим;
 // при натисканні воно повинно ставати червоним;
 // повторне натискання повинно повертати початковий стан.
 // Для зміни стану використовуйте JavaScript та CSS-класи.
-const likeBtn = document.querySelector('.btnLike');
 
-likeBtn.addEventListener('click', (e) => {
-    const isActive = e.target.classList.toggle('btnLikeActive');
-});
+// 9. ⭐ Challenge (за бажанням). 
+
+// Додайте до картки лічильник вподобань.
+// При натисканні на ❤️:
+// якщо користувач поставив вподобання — лічильник збільшується на 1;
+// якщо прибрав вподобання — зменшується на 1;
+// колір сердечка змінюється відповідно до його стану.
+const likeBtn = document.querySelector('.btnLike');
+const likeCounter = document.querySelector('.likeCounter');
+
+function onLikeHandler(e) {
+    const isActive = e.currentTarget.classList.toggle('btnLikeActive');
+
+    if (isActive) {
+        likeCounter.textContent++;
+    } else {
+        likeCounter.textContent--;
+    }
+}
+
+likeBtn.addEventListener('click', onLikeHandler);
+
 
 // 4. ✅ Додаткова інформація
 
