@@ -157,3 +157,39 @@ function onClickHendler(e) {
 userLinks.addEventListener('click', onClickHendler);
 
 
+
+// 8. ⭐ Challenge (за бажанням). Спливаючі підказки
+
+// Додайте до картки два інформаційні елементи:
+// іконку біля професії;
+// зелений індикатор статусу користувача.
+// Для кожного елемента додайте атрибут data-tooltip із текстом додаткової інформації.
+// Наприклад:
+// <span class="info" data-tooltip="Працює Frontend Developer понад 4 роки"> ⓘ </span>
+// <span class="status" data-tooltip="Зараз доступний для нових проєктів"> ● </span>
+
+// При взаємодії з елементом показуйте спливаючу підказку з відповідним текстом.
+// Отримуйте текст підказки за допомогою dataset.
+// Підказка: data-* атрибути дозволяють зберігати додаткові дані безпосередньо в HTML-елементі та отримувати їх у JavaScript.
+
+const tooltipElements = document.querySelectorAll('[data-tooltip]');
+const tooltipBox = document.getElementById('tooltipBox');
+
+tooltipElements.forEach((el) => {
+    //еще есть mouseover
+    el.addEventListener('mouseenter', (e) => {
+        tooltipBox.textContent = e.target.dataset.tooltip;
+        tooltipBox.style.display = 'block';
+    });
+
+    el.addEventListener('mousemove', (e) => {
+        tooltipBox.style.left = e.pageX + 15 + 'px';
+        tooltipBox.style.top = e.pageY + 15 + 'px';
+    });
+    //еще есть mouseout
+    el.addEventListener('mouseleave', () => {
+        tooltipBox.style.display = 'none';
+    });
+});
+
+

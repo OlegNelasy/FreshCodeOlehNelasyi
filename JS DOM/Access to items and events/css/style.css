@@ -37,6 +37,38 @@ body {
     font-weight: bold;
 }
 
+.status {
+    color: green;
+    cursor: pointer; 
+}
+
+.info {
+    color: #8C8D8F;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;   
+    width: 18px;      
+    height: 18px;
+    border: 1px solid #8C8D8F;
+    border-radius: 50%;      
+    font-size: 12px;      
+    cursor: pointer;     
+    margin-left: 5px;
+}
+
+.tooltip {
+    position: absolute; 
+    display: none;      
+    background-color: #393a3d;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    pointer-events: none; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+}  
+
 .userContact {
     padding: 15px;
 }

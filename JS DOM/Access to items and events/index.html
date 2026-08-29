@@ -13,16 +13,32 @@
         <section class="userNameData">
             <img class="userPhoto" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9A0F951_GQOmePb44Yh3Jh0ScaKDZe4w60cL-DRQVIxTaElnrqYXN5uU&s=10" alt="Photo">
             <h2>Иван Иванов</h2>
-            <p class="userNickname">@vany_ivanov</p>
+            <p class="userNickname">
+                @vany_ivanov
+                <span class="status" data-tooltip="Сейчас доступный для новых проектов">●</span>
+            </p>
         </section>
         <section class="userData">
-            <p><span class="bold">День рождения: </span>1 января 1999</p>
-            <p><span class="bold">Профессия: </span>Программист</p>
+            <p>
+                <span class="bold">День рождения: </span>
+                1 января 1999
+            </p>
+            <p>
+                <span class="bold">Профессия: </span>
+                Программист
+                <span class="info" data-tooltip="Работает Fullstek Developer больше 4 лет">?</span>
+            </p>
             <p><span class="bold">Краткое описание: </span>Люблю программировать.</p>
         </section>
         <section class="userContact userContactHidden">
-            <p><span class="bold">Email: </span>ivan@gmail.com</p>
-            <p><span class="bold">Телефон: </span><span id="phoneNumber">+38098*******</span></p>
+            <p>
+                <span class="bold">Email: </span>
+                ivan@gmail.com
+            </p>
+            <p>
+                <span class="bold">Телефон: </span>
+                <span id="phoneNumber">+38098*******</span>
+            </p>
         </section>
         <section class="userButtons">
             <button class="btn btnLike">❤ <span class="likeCounter">0</span></button>
@@ -35,5 +51,6 @@
             <a class="userLink" href="#">Проекты</a>
         </section>
     </section>
+    <div id="tooltipBox" class="tooltip"></div>
 </body>
 </html>
