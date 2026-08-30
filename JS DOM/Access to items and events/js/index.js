@@ -78,12 +78,11 @@ const phoneOperators = new Map([
 ]);
 
 const phoneNumber = document.getElementById('phoneNumber');
-let originalText = '';
+const originalText = phoneNumber.textContent;
+const code = originalText.slice(3, 6);
+const operatorName = phoneOperators.get(code) || 'Неизвестный операторы';
 
 phoneNumber.addEventListener('mouseenter', (e) => {
-    originalText = e.target.textContent;
-    const code = originalText.slice(3, 6);
-    const operatorName = phoneOperators.get(code) || 'Не известный оператор';
     e.target.textContent = `${originalText} (${operatorName})`;
 });
 
