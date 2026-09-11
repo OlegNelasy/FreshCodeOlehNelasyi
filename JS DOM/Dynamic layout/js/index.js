@@ -46,6 +46,10 @@ news.forEach((newsData) => {
     newsItem.innerHTML = `
     <header class="news-header" style="background-image: url('${newsData.headerBgSrc}');">
         <h2 class="news-title">${newsData.title}</h2>
+        <div class="news-buttons">
+            <button class="news-btn news-btn-like">❤</button>
+            <button class="news-btn news-btn-delete">✖</button>
+        </div>
     </header>
     <div class="news-info">
         <span class="news-category">${newsData.category}</span>
@@ -53,6 +57,23 @@ news.forEach((newsData) => {
         <time class="news-date" datetime="${newsData.date}">${newsData.date}</time>
     </div>
     `;
+
+    newsItem.addEventListener('click', () => {
+        newsItem.classList.toggle('news-item-active');
+    });
+
+    const likeBtn = newsItem.querySelector('.news-btn-like');
+
+    likeBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        likeBtn.classList.toggle('news-btn-like-active');
+    });
+
+    const deleteBtn = newsItem.querySelector('.news-btn-delete');
+
+    deleteBtn.addEventListener('click', () => {
+        newsItem.remove();
+    });
 
     document.body.appendChild(newsItem);
 

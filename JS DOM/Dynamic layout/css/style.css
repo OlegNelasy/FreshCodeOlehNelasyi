@@ -9,6 +9,10 @@ body {
     margin: 20px auto;
 }
 
+.news-item-active {
+    border: 1px solid lightskyblue;
+}
+
 .news-header {
     background-size: cover;
     background-position: center;
@@ -39,12 +43,34 @@ body {
     text-align: center;
 }
 
+.news-buttons {
+    position: absolute;
+    top: 5px;       
+    right: 5px;
+    z-index: 2;
+}
+
+.news-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.news-btn-like {
+    color: gray;
+}
+
+.news-btn-like-active {
+    color: palevioletred;
+}
+
 .news-info {
     padding: 30px 20px;
     /* position: relative; */
 }
 
 .news-category {
+    display: inline-block;
     color: gray;
     text-transform: uppercase;
 }
