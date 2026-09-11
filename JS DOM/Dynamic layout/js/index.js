@@ -38,18 +38,39 @@ const news = [
     },
 ];
 
-const newsItem = document.createElement('article');
-newsItem.classList.add('news-item');
 
-newsItem.innerHTML = `
-    <header class="news-header" style="background-image: url('https://cdn.mos.cms.futurecdn.net/yS8AdDkWFHzDhEjycLwkc9-970-80.jpg.webp');">
-        <h2 class="news-title">Minecraft's new frogs were briefly swallowing goats whole</h2>
+news.forEach((newsData) => {
+    const newsItem = document.createElement('article');
+    newsItem.classList.add('news-item');
+
+    newsItem.innerHTML = `
+    <header class="news-header" style="background-image: url('${newsData.headerBgSrc}');">
+        <h2 class="news-title">${newsData.title}</h2>
     </header>
     <div class="news-info">
-        <span class="news-category">Nintendo</span>
-        <p class="news-text">Nintendo hosted one of its regular Nintendo Direct showcases today, and aside from the frankly troubling new Kirby game coming later this year, which should be of concern to everyone, it was a pretty unexciting affair for PC gamers. Aside from one big announcement: Valve is bringing both Portal games to the handheld later this year, marking the very first time a Valve-developed game has featured on a Nintendo platform. Yes, Bridge Constructor Portal exists on Switch, but that was developed by ClockStone and, according to its Steam page, wasn't even published by Valve. The Portal: Companion Collection marks Valve's Nintendo debut proper, and features both the original Portal and its sequel, both ported in collaboration with NVIDIA Lightspeed Studios. As the name implies, that's an internal NVIDIA studio that has, among other things, worked on the Quake 2 RTX project.</p>
-        <time class="news-date" datetime="2023-02-02">2023.02.02</time>
-    </div>    
+        <span class="news-category">${newsData.category}</span>
+        <p class="news-text">${newsData.body}</p>
+        <time class="news-date" datetime="${newsData.date}">${newsData.date}</time>
+    </div>
     `;
 
-document.body.appendChild(newsItem);
+    document.body.appendChild(newsItem);
+
+});
+
+
+// const newsItem = document.createElement('article');
+// newsItem.classList.add('news-item');
+
+// newsItem.innerHTML = `
+//     <header class="news-header" style="background-image: url('https://cdn.mos.cms.futurecdn.net/yS8AdDkWFHzDhEjycLwkc9-970-80.jpg.webp');">
+//         <h2 class="news-title">Minecraft's new frogs were briefly swallowing goats whole</h2>
+//     </header>
+//     <div class="news-info">
+//         <span class="news-category">Nintendo</span>
+//         <p class="news-text">Nintendo hosted one of its regular Nintendo Direct showcases today, and aside from the frankly troubling new Kirby game coming later this year, which should be of concern to everyone, it was a pretty unexciting affair for PC gamers. Aside from one big announcement: Valve is bringing both Portal games to the handheld later this year, marking the very first time a Valve-developed game has featured on a Nintendo platform. Yes, Bridge Constructor Portal exists on Switch, but that was developed by ClockStone and, according to its Steam page, wasn't even published by Valve. The Portal: Companion Collection marks Valve's Nintendo debut proper, and features both the original Portal and its sequel, both ported in collaboration with NVIDIA Lightspeed Studios. As the name implies, that's an internal NVIDIA studio that has, among other things, worked on the Quake 2 RTX project.</p>
+//         <time class="news-date" datetime="2023-02-02">2023.02.02</time>
+//     </div>
+//     `;
+
+// document.body.appendChild(newsItem);
