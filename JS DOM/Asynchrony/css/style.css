@@ -5,3 +5,14 @@ body {
     height: 100vh;
     font-size: 30px;
 }
+
+.cat-info-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.btn {
+    cursor: pointer;
+}
