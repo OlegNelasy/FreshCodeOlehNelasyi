@@ -9,18 +9,12 @@ const btn = document.createElement('button');
 catInfoContainer.classList.add('cat-info-container');
 document.body.appendChild(catInfoContainer);
 
-
 catInfoText.classList.add('cat-info-text');
 catInfoContainer.appendChild(catInfoText);
 
 btn.classList.add('btn');
 btn.textContent = `Получить факт`
 catInfoContainer.appendChild(btn);
-
-
-// btn.addEventListener('click', () => {
-//             catInfoText.textContent = data.fact;
-//         })
 
 btn.addEventListener('click', () => {
     fetch(apiUrl)

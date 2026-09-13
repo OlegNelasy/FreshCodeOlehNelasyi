@@ -4,13 +4,10 @@
 //     let number = from;
 
 //     const timer = setInterval(() => {
-//         if (number <= to) {
-//             console.log(number);
-//             number++;
-//         } else {
+//         if (number >= to) {
 //             clearInterval(timer);
 //         }
-
+//         console.log(number++);
 //     }, interval);
 // }
 
@@ -21,8 +18,9 @@ function printNumbers(from, to, interval) {
         return;
     }
 
+    console.log(from);
+
     setTimeout(() => {
-        console.log(from);
         printNumbers(++from, to, interval);
     }, interval)
 }
