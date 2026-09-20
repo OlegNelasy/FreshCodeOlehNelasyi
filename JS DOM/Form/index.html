@@ -19,8 +19,8 @@
             <div class="form-row">
                 <label class="form-label" for="first-name">Your name</label>
                 <div class="input-group">
-                    <input class="form-input" type="text" name="first-name" id="first-name" placeholder="first name">
-                    <input class="form-input" type="text" name="last-name" placeholder="last name">
+                    <input class="form-input" type="text" name="first-name" id="first-name" placeholder="First name" minlength="3" pattern="^[A-ZА-ЯІЇЄҐ].*" title="Первая буква должна быть заглавной и не меньше 3 символов">
+                    <input class="form-input" type="text" name="last-name" id="last-name" placeholder="Last name" minlength="3" pattern="^[A-ZА-ЯІЇЄҐ].*" title="Первая буква должна быть заглавной и не меньше 3 символов">
                 </div>
             </div>
 
@@ -34,17 +34,17 @@
             <div class="form-row">
                 <label class="form-label" for="phone1">Phone *</label>
                 <div class="input-group">
-                    <input class="form-input" type="text" id="phone1" name="phone1" placeholder="000" minlength="3" maxlength="3" required>
-                    <input class="form-input" type="text" name="phone2" placeholder="000" minlength="3" maxlength="3" required>
-                    <input class="form-input" type="text" name="phone3" placeholder="0000" minlength="4" maxlength="4" required>
+                    <input class="form-input" type="text" id="phone1" name="phone1" placeholder="000" minlength="3" maxlength="3" pattern="[0-9]{3}" title="Только цифры" required>
+                    <input class="form-input" type="text" name="phone2" placeholder="000" minlength="3" maxlength="3" pattern="[0-9]{3}" title="Только цифры" required>
+                    <input class="form-input" type="text" name="phone3" placeholder="0000" minlength="4" maxlength="4" pattern="[0-9]{4}" title="Только цифры" required>
                 </div>
             </div>
                 
             <div class="form-row">
-                <label class="form-label" for="Massage-subject">Massage subject *</label>
+                <label class="form-label" for="Message-subject">Message subject *</label>
                 <div class="input-group">
-                    <select class="form-select" name="Massage subject" id="Massage-subject">
-                        <option value="">-- Please select a subject --</option>
+                    <select class="form-select" name="Message subject" id="Message-subject" required>
+                        <option value="" disabled selected>-- Please select a subject --</option>
                         <option value="order_status">Order status</option>
                         <option value="product_info">Product information</option>
                         <option value="support">Technical support</option>
@@ -58,7 +58,7 @@
             <div class="form-row message-row">
                 <label class="form-label" for="Message">Message *</label>
                 <div class="input-group">
-                    <textarea class="form-input form-input-textarea" id="Message" name="Message" rows="4"></textarea>
+                    <textarea class="form-input form-input-textarea" id="Message" name="Message" rows="4" minlength="5" maxlength="400" required></textarea>
                 </div>
             </div>
 
