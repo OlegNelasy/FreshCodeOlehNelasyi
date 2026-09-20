@@ -1,6 +1,28 @@
+:root {
+  --line-color: rgba(255, 255, 255, 0.4);
+  --btn-color: white;
+  --input-background: lightgray;
+}
+
 body {
     display: flex;
     justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(https://www.zastavki.com/pictures/originals/2017Nature___Beach_Transparent_blue_water_in_the_ocean_near_a_tropical_beach_115970_.jpg);
+    background-repeat: no-repeat; 
+    background-size: cover;
+    color: white;
+}
+
+.section-form {
+    padding: 40px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--line-color);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
 }
 
 .contact-form {
@@ -21,7 +43,7 @@ body {
 }
 
 .form-label {
-    width: 150px; 
+    width: 130px; 
     flex-shrink: 0; 
 }
 
@@ -35,10 +57,10 @@ body {
     flex: 1;
     width: 100%;
     padding: 10px;
-
     border-radius: 6px;
-    border: 1px solid black;
+    border: 2.5px solid var(--line-color);
     outline: none;
+    background-color: var(--input-background);
 }
 
 .form-input-textarea {
@@ -50,25 +72,23 @@ body {
     flex: 1;
     width: 100%;
     padding: 10px;
-
     border-radius: 6px;
-    border: 1px solid black;
+    border: 1px solid var(--line-color);
+    background-color: var(--input-background);
 }
 
 .form-header {
-    margin-bottom: 10px; 
+    margin-bottom: 40px; 
 }
 
 .form-title {
     font-size: 28px;
     font-weight: bold;
-    /* color: #ffffff; */
-    margin-bottom: 15px;
+    margin-bottom: 10px; 
 }
 
 .form-description {
     font-size: 14px;
-    /* color: rgba(255, 255, 255, 0.7); */
 }
 
 .form-input[name="phone1"],
@@ -80,33 +100,64 @@ body {
     flex: 1.5;
 }
 
-
-
-/* Длинная полоса над кнопкой */
 .form-divider {
-  width: 100%;
-  border: none;
-  border-top: 1px solid black; 
-  margin: 10px 0 20px 0; 
+    width: 100%;
+    border: none;
+    border-top: 1px solid var(--line-color); 
+    margin: 10px 0 20px 0; 
 }
 
-/* Стили самой кнопки */
 .submit-btn {
-  width: 100%;
-  padding: 15px;
-  background-color: black;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-family: inherit;
-  font-size: 14px;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--btn-color);
+    background: linear-gradient(to right, #004d4d, #006666); 
+    box-shadow: 0 4px 8px rgba(0, 102, 102, 0.4);
 }
 
 .btn-text {
-  border-bottom: 1px solid white; /* Белая линия под текстом */
-  padding-bottom: 4px; /* Расстояние от букв до линии */
+    border-bottom: 1px solid var(--btn-color); 
+    padding: 4px 10px;
+}
+
+@media (max-width: 433px) {
+    .section-form {
+        padding: 20px;
+    }    
+    
+    .contact-form {
+        padding: 0;
+    }
+
+    .form-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+    }
+
+    .form-label {
+        width: 100%;
+        padding-top: 0;
+    }
+
+    .input-group {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .form-header {
+        margin-bottom: 20px; 
+    }
+
+    .form-divider {
+        margin: 0; 
+    }
 }
