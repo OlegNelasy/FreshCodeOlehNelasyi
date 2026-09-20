@@ -1,3 +1,5 @@
+"use strict";
+
 const form = document.getElementById('contactForm');
 
 const phone1 = form.elements['phone1'];
@@ -18,10 +20,11 @@ function setupAutoJump(currentInput, nextInput, prevInput) {
     });
 }
 
-setupAutoJump(phone1, phone2, null);   // У первого поля нет предыдущего
+setupAutoJump(phone1, phone2, null);
 setupAutoJump(phone2, phone3, phone1);
-setupAutoJump(phone3, null, phone2);   // У третьего поля нет следующего
+setupAutoJump(phone3, null, phone2);
 
+//1.0
 form.addEventListener('submit', (event) => {
     event.preventDefault();
 
@@ -42,6 +45,34 @@ form.addEventListener('submit', (event) => {
         message: rawMessage.trim().replace(/\s+/g, ' ')
     };
 
-    console.log('Дані успішно пройшли валідацію та зібрані:', formData);
+    console.log('Данные успешно валидацию проверку:', formData);
     // form.reset();
 });
+
+//2.1
+function containsNumber(str) {
+    return /\d/.test(str);
+}
+console.log('containsNumber("admin123")', containsNumber("admin123"));
+console.log('containsNumber("Hello world") ', containsNumber("Hello world"));
+
+//2.2
+function isImageFile(fileName) {
+    return /\.(jpg|png)$/i.test(fileName);
+}
+console.log('isImageFile("photo.JPG")', isImageFile("photo.JPG"));
+console.log('isImageFile("document.pdf")', isImageFile("document.pdf"));
+
+//2.3
+function formatSlug(text) {
+    return text.trim().replace(/\s+/g, '-');
+}
+console.log('formatSlug("contact    us        today") =>', formatSlug("contact    us        today")); // => "contact-us-today"
+
+//2.4
+function extractPrice(text) {
+    const match = text.match(/\d+/);
+    return match ? match[0] : null;
+}
+console.log('extractPrice("Товар коштує 450 грн") =>', extractPrice("Товар коштує 450 грн")); // => "450" 
+console.log('extractPrice("Ваша знижка 15%") =>', extractPrice("Ваша знижка 15%")); // => "15"
