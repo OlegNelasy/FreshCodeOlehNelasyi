@@ -1,0 +1,112 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 800px; 
+}
+
+.form-row {
+    display: flex;
+    align-items: center;
+}
+
+.message-row {
+    align-items: flex-start; 
+}
+
+.form-label {
+    width: 150px; 
+    flex-shrink: 0; 
+}
+
+.input-group {
+    display: flex;
+    flex: 1;
+    gap: 15px;
+}
+
+.form-input {
+    flex: 1;
+    width: 100%;
+    padding: 10px;
+
+    border-radius: 6px;
+    border: 1px solid black;
+    outline: none;
+}
+
+.form-input-textarea {
+    resize: vertical; /* Позволяет пользователю растягивать поле только по вертикали */
+    font-family: inherit; 
+}
+
+.form-select {
+    flex: 1;
+    width: 100%;
+    padding: 10px;
+
+    border-radius: 6px;
+    border: 1px solid black;
+}
+
+.form-header {
+    margin-bottom: 10px; 
+}
+
+.form-title {
+    font-size: 28px;
+    font-weight: bold;
+    /* color: #ffffff; */
+    margin-bottom: 15px;
+}
+
+.form-description {
+    font-size: 14px;
+    /* color: rgba(255, 255, 255, 0.7); */
+}
+
+.form-input[name="phone1"],
+.form-input[name="phone2"] {
+    flex: 1;
+}
+
+.form-input[name="phone3"] {
+    flex: 1.5;
+}
+
+
+
+/* Длинная полоса над кнопкой */
+.form-divider {
+  width: 100%;
+  border: none;
+  border-top: 1px solid black; 
+  margin: 10px 0 20px 0; 
+}
+
+/* Стили самой кнопки */
+.submit-btn {
+  width: 100%;
+  padding: 15px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-text {
+  border-bottom: 1px solid white; /* Белая линия под текстом */
+  padding-bottom: 4px; /* Расстояние от букв до линии */
+}

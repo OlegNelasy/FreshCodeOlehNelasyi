@@ -4,10 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">\
     <script defer src="./js/script.js"></script>
 </head>
 <body>
-    
+    <form id="contactForm" class="contact-form" action="#" method="post">
+        <div class="form-header">
+            <h2 class="form-title">Contact form</h2>
+            <p class="form-description">Please fill in your information and we'll be sending your order.</p>
+        </div>
+
+        <div class="form-row">
+            <label class="form-label" for="first-name">Your name</label>
+            <div class="input-group">
+                <input class="form-input" type="text" name="first-name" id="first-name" placeholder="first name">
+                <input class="form-input" type="text" name="last-name" placeholder="last name">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <label class="form-label" for="email">Your email</label>
+            <div class="input-group">
+                <input class="form-input" type="email" name="email" id="email" placeholder="your_mail@mail.com">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <label class="form-label" for="phone1">Phone *</label>
+            <div class="input-group">
+                <input class="form-input" type="text" id="phone1" name="phone1" placeholder="000" minlength="3" maxlength="3" required>
+                <input class="form-input" type="text" name="phone2" placeholder="000" minlength="3" maxlength="3" required>
+                <input class="form-input" type="text" name="phone3" placeholder="0000" minlength="4" maxlength="4" required>
+            </div>
+        </div>
+            
+        <div class="form-row">
+            <label class="form-label" for="Massage-subject">Massage subject *</label>
+            <div class="input-group">
+                <select class="form-select" name="Massage subject" id="Massage-subject">
+                    <option value="">-- Please select a subject --</option>
+                    <option value="order_status">Order status</option>
+                    <option value="product_info">Product information</option>
+                    <option value="support">Technical support</option>
+                    <option value="refund">Refund / Return</option>
+                    <option value="partnership">Partnership</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-row message-row">
+            <label class="form-label" for="Message">Message *</label>
+            <div class="input-group">
+                <textarea class="form-input form-input-textarea" id="Message" name="Message" rows="4"></textarea>
+            </div>
+        </div>
+
+        <!-- Разделительная полоса над кнопкой -->
+        <hr class="form-divider">
+
+        <!-- Строка с кнопкой отправки -->
+        <div class="form-row">
+            <!-- Пустой div вместо label, чтобы кнопка сместилась вправо под инпуты -->
+            <div class="form-label"></div>
+            
+            <div class="input-group">
+                <button type="submit" class="submit-btn">
+                <span class="btn-text">SUBMIT FORM</span>
+                </button>
+            </div>
+        </div>
+    </form>
 </body>
 </html>
