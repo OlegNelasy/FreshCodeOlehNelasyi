@@ -1,0 +1,43 @@
+/* Указываем box-sizing для всех элементов, чтобы padding и border не увеличивали ширину блока */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Устанавливаем базовые параметры для body */
+body {
+  /* min-height: 100vh; */
+  line-height: 1.5;
+  /* font-family: sans-serif; */
+}
+
+/* Убираем маркеры у списков */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Убираем стандартное подчеркивание у ссылок */
+a {
+  text-decoration: none;
+}
+
+/* Делаем картинки адаптивными, чтобы они не вылезали за пределы контейнера */
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+/* Наследуем шрифты для элементов форм (кнопки, инпуты), так как по умолчанию браузер ставит им свои */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
