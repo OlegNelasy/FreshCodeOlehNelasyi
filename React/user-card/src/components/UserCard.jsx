@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styles from "./UserCard.module.css";
 
 function UserCard({
@@ -9,6 +10,17 @@ function UserCard({
   isMale,
   stats: { tweets, following, followers },
 }) {
+  const [followersCount, setFollowersCount] = useState(followers);
+  const [isStarred, setIsStarred] = useState(false);
+
+  const handleFollowClick = () => {
+    setFollowersCount(followersCount + 1);
+  };
+
+  const toggleStar = () => {
+    setIsStarred(!isStarred);
+  };
+
   const shadowColor = isMale
     ? "rgba(29, 155, 240, 0.8)"
     : "rgba(249, 24, 128, 0.8)";
@@ -40,7 +52,17 @@ function UserCard({
           )}
         </h2>
         <span>@{hashtag}</span>
-        <button className={styles.addButton}>+</button>
+        <button className={styles.addButton} onClick={handleFollowClick}>
+          +
+        </button>
+        <svg
+          className={styles.starIcon}
+          onClick={toggleStar}
+          viewBox="0 0 24 24"
+          fill={isStarred ? "#ffd700" : "#a0a0a0"}
+        >
+          <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
+        </svg>
       </header>
       <footer className={styles.footerContainer}>
         <div className={styles.statItem}>
@@ -53,7 +75,7 @@ function UserCard({
         </div>
         <div className={styles.statItem}>
           <span className={styles.statLabel}>Followers</span>
-          <span className={styles.statValue}>{followers}</span>
+          <span className={styles.statValue}>{followersCount}</span>
         </div>
       </footer>
     </article>
