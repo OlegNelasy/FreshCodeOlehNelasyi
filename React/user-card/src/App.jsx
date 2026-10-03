@@ -1,20 +1,6 @@
-import UserCard from "./components/UserCard/";
+import UserCards from "./components/UserCards";
+import { usersData } from "./data/usersData";
 
-function App() {
-  const img =
-    "https://img.magnific.com/free-photo/dark-blonde-bearded-man-crosses-his-hands-chest-posing-black-shirt_8353-1116.jpg?semt=ais_hybrid&w=740&q=80";
-
-  return (
-    <UserCard
-      photo={img}
-      firstName={"Program"}
-      lastName={"Programovich"}
-      hashtag={"Programer"}
-      stats={{ tweets: 1337, following: 561, followers: 718 }}
-      isVerified={true}
-      isMale={true}
-    />
-  );
+export default function App() {
+  return <UserCards usersData={usersData} />;
 }
-
-export default App;

@@ -6,6 +6,8 @@ import UserCardFooter from "./UserCardFooter";
 import UserCardHeader from "./UserCardHeader";
 
 function UserCard({
+  id,
+  onDelete,
   photo,
   firstName,
   lastName,
@@ -26,11 +28,30 @@ function UserCard({
     setIsStarred(!isStarred);
   };
 
+  const [isSelected, setIsSelected] = useState(false);
+
+  const handleCardClick = () => {
+    setIsSelected(!isSelected);
+  };
+
+  const shadowClass = isSelected
+    ? styles.cardSelected
+    : isMale
+      ? styles.сardMan
+      : styles.сardWoman;
+
+  const handleCloseClick = (e) => {
+    e.stopPropagation();
+    onDelete(id);
+  };
+
   return (
     <article
-      className={`${styles.card} ${isMale ? styles.сardMan : styles.сardWoman}`}
+      className={`${styles.card} ${shadowClass}`}
+      onClick={handleCardClick}
     >
       <UserCardHeader
+        onDelete={handleCloseClick}
         firstName={firstName}
         lastName={lastName}
         isVerified={isVerified}

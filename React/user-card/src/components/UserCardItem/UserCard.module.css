@@ -2,7 +2,6 @@
     width: 320px;
     border-radius: 10px;
     overflow: hidden;
-    /* position: relative; */
 }
 
 .сardMan{
@@ -11,6 +10,10 @@
 
 .сardWoman{
     box-shadow: 0 12px 30px 5px rgba(249, 24, 128, 0.8);
+}
+
+.cardSelected {
+    box-shadow: 0px 12px 30px 5px rgba(255, 170, 0, 0.6); 
 }
 
 .headerContainer {
@@ -112,5 +115,20 @@
 
 .starIcon:active {
     transform: scale(0.85);
+}
+
+.closeIcon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    color: white; 
+    z-index: 10; 
+    transition: color 0.2s ease;
+    filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.8));
+}
+
+.closeIcon:hover {
+    color: #ff4d4f;
 }
 

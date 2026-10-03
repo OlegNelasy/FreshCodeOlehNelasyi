@@ -2,8 +2,10 @@ import styles from "./UserCard.module.css";
 
 import { VerifyIcon } from "./VerifyIcon";
 import { StarIcon } from "./StarIcon";
+import { CloseIcon } from "./CloseIcon";
 
 export default function UserCardHeader({
+  onDelete,
   firstName,
   lastName,
   isVerified,
@@ -28,6 +30,7 @@ export default function UserCardHeader({
       <button className={styles.addButton} onClick={buttonOnClick}>
         +
       </button>
+      <CloseIcon className={styles.closeIcon} onClick={onDelete} />
       <StarIcon
         className={styles.starIcon}
         onClick={StarIconOnClick}
