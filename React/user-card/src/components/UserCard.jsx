@@ -25,14 +25,9 @@ function UserCard({
     setIsStarred(!isStarred);
   };
 
-  const shadowColor = isMale
-    ? "rgba(29, 155, 240, 0.8)"
-    : "rgba(249, 24, 128, 0.8)";
-
   return (
     <article
-      className={styles.card}
-      style={{ boxShadow: `0 12px 30px 5px ${shadowColor}` }}
+      className={`${styles.card} ${isMale ? styles.сardMan : styles.сardWoman}`}
     >
       <header
         className={styles.headerContainer}
