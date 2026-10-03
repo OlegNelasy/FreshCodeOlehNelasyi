@@ -15,23 +15,21 @@ function UserCard({
   isVerified,
   isMale,
   stats: { tweets, following, followers },
+  onSelect,
+  isSelected,
 }) {
   const [followersCount, setFollowersCount] = useState(followers);
 
-  const handleFollowClick = () => {
+  const handleFollowClick = (e) => {
+    e.stopPropagation();
     setFollowersCount(followersCount + 1);
   };
 
   const [isStarred, setIsStarred] = useState(false);
 
-  const toggleStar = () => {
+  const toggleStar = (e) => {
+    e.stopPropagation();
     setIsStarred(!isStarred);
-  };
-
-  const [isSelected, setIsSelected] = useState(false);
-
-  const handleCardClick = () => {
-    setIsSelected(!isSelected);
   };
 
   const shadowClass = isSelected
@@ -48,7 +46,7 @@ function UserCard({
   return (
     <article
       className={`${styles.card} ${shadowClass}`}
-      onClick={handleCardClick}
+      onClick={() => onSelect(id)}
     >
       <UserCardHeader
         onDelete={handleCloseClick}

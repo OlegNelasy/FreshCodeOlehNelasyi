@@ -1,0 +1,18 @@
+.counterContainer {
+    background-color: white;
+    padding: 12px 24px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin-bottom: 10px;
+}
+
+.counterText {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333333;
+}
+
+.highlight {
+    font-weight: 700;
+    color: red;
+}

@@ -1,14 +1,7 @@
-import { useState } from "react";
-import UserCardItem from "../UserCardItem";
+import UserCardItem from "../UserCardItem/";
 import stelys from "./UserCard.module.css";
 
-export default function UserCards({ usersData }) {
-  const [users, setUsers] = useState(usersData);
-
-  const handleDeleteUser = (idToRemove) => {
-    setUsers(users.filter((user) => user.id !== idToRemove));
-  };
-
+export default function UserCards({ users, onDeleteUser, onToggleSelect }) {
   return (
     <main className={stelys.UserCardsContainer}>
       {users.map(
@@ -21,11 +14,13 @@ export default function UserCards({ usersData }) {
           stats,
           isVerified,
           isMale,
+          isSelected,
         }) => (
           <UserCardItem
             key={id}
             id={id}
-            onDelete={handleDeleteUser}
+            onDelete={onDeleteUser}
+            onSelect={onToggleSelect}
             photo={photo}
             firstName={firstName}
             lastName={lastName}
@@ -33,6 +28,7 @@ export default function UserCards({ usersData }) {
             stats={stats}
             isVerified={isVerified}
             isMale={isMale}
+            isSelected={isSelected}
           />
         ),
       )}
