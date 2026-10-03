@@ -1,5 +1,9 @@
 import { useState } from "react";
+
 import styles from "./UserCard.module.css";
+
+import { VerifyIcon } from "./VerifyIcon";
+import { StarIcon } from "./StarIcon";
 
 function UserCard({
   photo,
@@ -38,31 +42,17 @@ function UserCard({
       >
         <h2 className={styles.userName}>
           {firstName} {lastName}
-          {isVerified && (
-            <svg className={styles.verifyIcon} viewBox="0 0 24 24">
-              <path
-                fill="#1d9bf0"
-                d="M22.5 12.5c0-1.58-.875-2.95-2.148-3.6.154-.435.238-.905.238-1.4 0-2.21-1.71-3.998-3.918-3.998-.47 0-.92.084-1.336.25C14.818 2.415 13.51 1.5 12 1.5s-2.816.917-3.337 2.25c-.416-.165-.866-.25-1.336-.25-2.21 0-3.918 1.79-3.918 4 0 .495.084.965.238 1.4-1.273.65-2.148 2.02-2.148 3.6 0 1.46.74 2.746 1.867 3.45-.032.21-.047.424-.047.64 0 2.21 1.71 3.998 3.918 3.998.47 0 .92-.084 1.336-.25C9.184 21.585 10.49 22.5 12 22.5s2.816-.917 3.337-2.25c.416.165.866.25 1.336.25 2.21 0 3.918-1.79 3.918-4 0-.216-.015-.43-.047-.64 1.127-.704 1.867-1.99 1.867-3.45z"
-              />
-              <path
-                fill="#ffffff"
-                d="M10.04 16.05l-3.36-3.36 1.42-1.42 1.94 1.94 5.2-5.2 1.42 1.42-6.62 6.62z"
-              />
-            </svg>
-          )}
+          {isVerified && <VerifyIcon className={styles.verifyIcon} />}
         </h2>
         <span>@{hashtag}</span>
         <button className={styles.addButton} onClick={handleFollowClick}>
           +
         </button>
-        <svg
+        <StarIcon
           className={styles.starIcon}
           onClick={toggleStar}
-          viewBox="0 0 24 24"
-          fill={isStarred ? "#ffd700" : "#a0a0a0"}
-        >
-          <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
-        </svg>
+          isStarred={isStarred}
+        />
       </header>
       <footer className={styles.footerContainer}>
         <div className={styles.statItem}>
