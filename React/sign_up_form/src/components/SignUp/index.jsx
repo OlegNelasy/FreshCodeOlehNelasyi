@@ -1,4 +1,6 @@
 import { Component } from "react";
+import cn from "classnames";
+
 import styles from "./SignUp.module.css";
 
 export default class SignUp extends Component {
@@ -92,10 +94,10 @@ export default class SignUp extends Component {
       email,
       password,
       passwordConfirmation,
-      showPassword,
-      showPasswordConfirmation,
       isAgreed,
       isSubmitted,
+      showPassword,
+      showPasswordConfirmation,
     } = this.state;
 
     const isFullNameInvalid = isSubmitted && !fullName.trim();
@@ -116,11 +118,13 @@ export default class SignUp extends Component {
           </label>
           <input
             id="fullName"
-            className={`${styles.input} ${isFullNameInvalid ? styles.inputError : ""}`}
+            className={cn(styles.input, {
+              [styles.inputError]: isFullNameInvalid,
+            })}
             type="text"
             name="fullName"
             placeholder="John Doe"
-            value={this.state.fullName}
+            value={fullName}
             onChange={this.handleChange}
           />
 
@@ -129,11 +133,13 @@ export default class SignUp extends Component {
           </label>
           <input
             id="email"
-            className={`${styles.input} ${isEmailInvalid ? styles.inputError : ""}`}
+            className={cn(styles.input, {
+              [styles.inputError]: isEmailInvalid,
+            })}
             type="email"
             name="email"
             placeholder="johndoe@gmail.com"
-            value={this.state.email}
+            value={email}
             onChange={this.handleChange}
           />
 
@@ -143,18 +149,20 @@ export default class SignUp extends Component {
           <div className={styles.inputContainer}>
             <input
               id="password"
-              className={`${styles.inputWithIcon} ${isPasswordInvalid ? styles.inputError : ""}`}
-              type={this.state.showPassword ? "text" : "password"}
+              className={cn(styles.inputWithIcon, {
+                [styles.inputError]: isPasswordInvalid,
+              })}
+              type={showPassword ? "text" : "password"}
               name="password"
               placeholder="Password"
-              value={this.state.password}
+              value={password}
               onChange={this.handleChange}
             />
             <span
               className={styles.togglePassword}
               onClick={this.togglePassword}
             >
-              {this.state.showPassword ? "🙈" : "👁️"}
+              {showPassword ? "🙈" : "👁️"}
             </span>
           </div>
 
@@ -164,18 +172,20 @@ export default class SignUp extends Component {
           <div className={styles.inputContainer}>
             <input
               id="passwordConfirmation"
-              className={`${styles.inputWithIcon} ${isConfirmationInvalid ? styles.inputError : ""}`}
-              type={this.state.showPasswordConfirmation ? "text" : "password"}
+              className={cn(styles.inputWithIcon, {
+                [styles.inputError]: isConfirmationInvalid,
+              })}
+              type={showPasswordConfirmation ? "text" : "password"}
               name="passwordConfirmation"
               placeholder="Password"
-              value={this.state.passwordConfirmation}
+              value={passwordConfirmation}
               onChange={this.handleChange}
             />
             <span
               className={styles.togglePassword}
               onClick={this.togglePasswordConfirmation}
             >
-              {this.state.showPasswordConfirmation ? "🙈" : "👁️"}
+              {showPasswordConfirmation ? "🙈" : "👁️"}
             </span>
           </div>
 
@@ -184,11 +194,13 @@ export default class SignUp extends Component {
               className={styles.checkboxContainerInput}
               type="checkbox"
               id="terms"
-              checked={this.state.isAgreed}
+              checked={isAgreed}
               onChange={this.handleCheckboxChange}
             />
             <label
-              className={`${styles.checkboxContainerLabel} ${isCheckboxInvalid ? styles.errorText : ""}`}
+              className={cn(styles.checkboxContainerLabel, {
+                [styles.errorText]: isCheckboxInvalid,
+              })}
               htmlFor="terms"
             >
               I Agree All Statements In Terms Of Service
