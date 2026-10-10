@@ -1,5 +1,12 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
+
+import UserList from "./components/UsersList";
+
 import "./index.css";
 
-createRoot(document.getElementById("root")).render(<StrictMode></StrictMode>);
+createRoot(document.getElementById("root")).render(
+  <StrictMode>
+    <UserList />
+  </StrictMode>,
+);

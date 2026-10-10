@@ -1,0 +1,27 @@
+.imgContainer {
+    width: 300px;
+}
+
+.imgContainerMale{
+    border: 3px solid blue;
+}
+
+.imgContainerMaleFemale{
+    border: 3px solid pink;
+}
+
+.infoContainer{
+    padding: 0 10px;
+}
+
+.photo {
+    width: inherit;
+    height: 250px;
+    object-fit: cover;
+}
+
+.flag {
+    width: 20px;
+    height: 15px;
+    vertical-align: -2px;
+}
