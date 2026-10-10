@@ -1,4 +1,4 @@
-import styles from "./UserCard.module.css";
+import styles from "./UserCardItem.module.css";
 
 import { VerifyIcon } from "./VerifyIcon";
 import { StarIcon } from "./StarIcon";

@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import styles from "./UserCard.module.css";
+import styles from "./UserCardItem.module.css";
 
 import UserCardFooter from "./UserCardFooter";
 import UserCardHeader from "./UserCardHeader";

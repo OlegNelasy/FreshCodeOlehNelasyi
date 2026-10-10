@@ -1,5 +1,5 @@
 import UserCardItem from "../UserCardItem/";
-import stelys from "./UserCard.module.css";
+import stelys from "./UserCards.module.css";
 
 export default function UserCards({ users, onDeleteUser, onToggleSelect }) {
   return (

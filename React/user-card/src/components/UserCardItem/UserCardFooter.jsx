@@ -1,4 +1,4 @@
-import styles from "./UserCard.module.css";
+import styles from "./UserCardItem.module.css";
 
 export default function UserCardFooter({ tweets, following, followersCount }) {
   return (
