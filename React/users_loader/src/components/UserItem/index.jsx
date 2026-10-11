@@ -31,12 +31,12 @@ export default class UserItem extends Component {
           {user.location && (
             <>
               <p>
-                Country:
+                Country:{" "}
                 <img
                   className={styles.flag}
                   src={`https://flagcdn.com/w40/${user.nat.toLowerCase()}.png`}
                   alt="flag"
-                />
+                />{" "}
                 {user.location.country}
               </p>
               <p>City: {user.location.city}</p>
