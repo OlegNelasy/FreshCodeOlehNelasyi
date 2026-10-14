@@ -1,0 +1,82 @@
+.weatherContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.weatherCard {
+  display: flex;
+  background-color: blue; 
+  padding: 8px;
+  border-radius: 12px;
+  gap: 8px;
+}
+
+.settingsSection,
+.displaySection {
+  background-color: lightblue; 
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.settingsSection {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 220px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  label {
+    color: black;
+    font-size: 15px;
+  }
+
+  select {
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 1px solid gray;
+    outline: none;
+    font-size: 14px;
+    background-color: white;
+    cursor: pointer;
+  }
+}
+
+.displaySection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+
+  h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: black;
+    font-weight: bold;
+  }
+}
+
+.weatherInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 18px;
+  color: black;
+}
+
+.infoRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon {
+  font-size: 20px;
+}
