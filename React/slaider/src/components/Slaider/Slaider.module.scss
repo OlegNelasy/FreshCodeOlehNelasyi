@@ -1,0 +1,111 @@
+.slaiderContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.figure {
+    max-width: 800px;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 450px; 
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.caption {
+    position: absolute;
+    bottom: 0; 
+    left: 0;   
+    width: 100%;
+    padding: 30px 20px 20px;
+    
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent); 
+    color: white;
+}
+
+.title {
+    margin: 0 0 10px 0;
+    font-size: 28px;
+}
+
+.description {
+    font-size: 16px;
+    line-height: 1.5;
+    opacity: 0.9;
+}
+
+.controls {
+    display: flex;
+    width: 100%;
+    max-width: 800px;
+    margin-top: 10px;
+    gap: 10px;
+    align-items: stretch;
+}
+
+.navButton {
+    background-color: black; 
+    color: white;
+    border: none;
+    padding: 0 15px;
+    cursor: pointer;
+    border-radius: 12px; 
+    font-weight: bold;
+    font-size: 18px;
+    transition: background-color 0.2s ease-in-out; 
+
+    &:hover {
+        background-color: gray; 
+    }
+
+    &:active {
+        background-color: black;
+    }
+}
+
+.thumbnailStrip {
+    flex: 1;
+    display: flex;
+    gap: 8px; 
+    overflow-x: auto;
+    border-radius: 12px;
+    padding-bottom: 4px;
+    
+    &::-webkit-scrollbar {
+        height: 6px; 
+    }
+    &::-webkit-scrollbar-thumb {
+        background: black;
+        border-radius: 10px;
+    }
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+}
+
+.thumbnail {
+    flex: 0 0 120px; 
+    height: 65px;
+    object-fit: cover;
+    cursor: pointer;
+    opacity: 0.5; 
+    transition: opacity 0.3s ease;
+    border-radius: 12px;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.activeThumbnail {
+    opacity: 1;
+    border: 2px solid #66c0f4; 
+}

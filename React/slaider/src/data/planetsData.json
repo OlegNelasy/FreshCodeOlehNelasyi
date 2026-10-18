@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "title": "Меркурий",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Mercury_in_true_color.jpg",
+    "description": "Самая маленькая планета Солнечной системы и ближайшая к Солнцу. Поверхность Меркурия испещрена кратерами и очень похожа на лунную."
+  },
+  {
+    "id": 2,
+    "title": "Венера",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/08/Venus_from_Mariner_10.jpg",
+    "description": "Вторая планета от Солнца. Из-за плотной атмосферы, создающей парниковый эффект, это самая горячая планета в нашей системе."
+  },
+  {
+    "id": 3,
+    "title": "Земля",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/97/The_Earth_seen_from_Apollo_17.jpg",
+    "description": "Третья планета от Солнца и единственное известное место во Вселенной, где существует жизнь. Около 71% её поверхности покрыто водой."
+  },
+  {
+    "id": 4,
+    "title": "Марс",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/02/OSIRIS_Mars_true_color.jpg",
+    "description": "Четвёртая планета от Солнца, также известная как «Красная планета» из-за оксида железа на поверхности, придающего ей красноватый оттенок."
+  },
+  {
+    "id": 5,
+    "title": "Юпитер",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Jupiter.jpg",
+    "description": "Пятая и самая большая планета Солнечной системы. Это газовый гигант, знаменитый своим Большим красным пятном (гигантским штормом)."
+  },
+  {
+    "id": 6,
+    "title": "Сатурн",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Saturn_during_Equinox.jpg",
+    "description": "Шестая планета от Солнца, газовый гигант. Сатурн наиболее известен своей потрясающей системой колец, состоящих изо льда и камней."
+  },
+  {
+    "id": 7,
+    "title": "Уран",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Uranus2.jpg",
+    "description": "Седьмая планета от Солнца. Это ледяной гигант, который уникален тем, что вращается как бы «лежа на боку»."
+  },
+  {
+    "id": 8,
+    "title": "Нептун",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/56/Neptune_Full.jpg",
+    "description": "Восьмая и самая дальняя планета Солнечной системы. Это холодный ледяной гигант с самыми сильными ветрами в нашей системе."
+  }
+]
