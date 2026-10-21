@@ -1,19 +1,35 @@
-import { Link, useLocation, Outlet } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
+import cs from "classnames";
+import styles from "./Components.module.scss";
 
 export default function Components() {
-  // const location = useLocation();
-  // console.log(location.pathname);
   return (
-    <div>
-      <ol>
-        <li>
-          <Link to="component_1">Component 1</Link>
-        </li>
-        <li>
-          <Link to="component_2">Component 2</Link>
-        </li>
-      </ol>
+    <section className={styles.componentsPage}>
+      <nav>
+        <ul className={styles.subMenu}>
+          <li>
+            <NavLink
+              to="component_1"
+              className={({ isActive }) =>
+                cs(styles.link, { [styles.activeLink]: isActive })
+              }
+            >
+              Component 1
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="component_2"
+              className={({ isActive }) =>
+                cs(styles.link, { [styles.activeLink]: isActive })
+              }
+            >
+              Component 2
+            </NavLink>
+          </li>
+        </ul>
+      </nav>
       <Outlet />
-    </div>
+    </section>
   );
 }
