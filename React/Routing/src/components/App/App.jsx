@@ -2,6 +2,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import Layout from "./../Layout";
 import Home from "./../../page/Home";
 import About from "./../../page/About";
+import Login from "./../../page/Login";
 import NotFound from "./../../page/NotFound";
 import Components from "./../../page/Components";
 import Component1 from "./../Component1";
@@ -21,6 +22,7 @@ export default function App() {
           <Route path="component_2" element={<Component2 />} />
         </Route>
 
+        <Route path="login" element={<Login />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>

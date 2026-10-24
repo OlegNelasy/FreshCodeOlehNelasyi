@@ -26,6 +26,11 @@ export default function Layout() {
                 Components
               </NavLink>
             </li>
+            <li>
+              <NavLink to="/login" className={calcClassName}>
+                Login
+              </NavLink>
+            </li>
           </ul>
         </nav>
       </header>
