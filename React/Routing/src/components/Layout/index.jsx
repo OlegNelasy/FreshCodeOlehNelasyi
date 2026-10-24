@@ -2,6 +2,9 @@ import { NavLink, Outlet } from "react-router-dom";
 import cs from "classnames";
 import styles from "./Layout.module.scss";
 
+const calcClassName = ({ isActive }) =>
+  cs(styles.link, { [styles.activeLink]: isActive });
+
 export default function Layout() {
   return (
     <div className={styles.layoutWrapper}>
@@ -9,32 +12,17 @@ export default function Layout() {
         <nav>
           <ul className={styles.mainMenu}>
             <li>
-              <NavLink
-                to="/"
-                className={({ isActive }) =>
-                  cs(styles.link, { [styles.activeLink]: isActive })
-                }
-              >
+              <NavLink to="/" className={calcClassName}>
                 Home
               </NavLink>
             </li>
             <li>
-              <NavLink
-                to="/about"
-                className={({ isActive }) =>
-                  cs(styles.link, { [styles.activeLink]: isActive })
-                }
-              >
+              <NavLink to="/about" className={calcClassName}>
                 About
               </NavLink>
             </li>
             <li>
-              <NavLink
-                to="/components"
-                className={({ isActive }) =>
-                  cs(styles.link, { [styles.activeLink]: isActive })
-                }
-              >
+              <NavLink to="/components" className={calcClassName}>
                 Components
               </NavLink>
             </li>
