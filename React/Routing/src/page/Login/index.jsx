@@ -4,11 +4,11 @@ import cn from "classnames";
 import styles from "./Login.module.scss";
 
 const userData = [
-  { login: "admin", password: "123" },
-  { login: "user", password: "password" },
-  { login: "test", password: "111" },
-  { login: "guest", password: "000" },
-  { login: "krabik", password: "12345" },
+  { login: "admin", password: "123", email: "admin@example.com" },
+  { login: "user", password: "password", email: "user@example.com" },
+  { login: "test", password: "111", email: "test@example.com" },
+  { login: "guest", password: "000", email: "guest@example.com" },
+  { login: "krabik", password: "12345", email: "krabik@example.com" },
 ];
 
 const FAIL_LOGIN_MESSAGE = "Неверный логин или пароль.";
@@ -23,7 +23,8 @@ export default function Login() {
         onSubmit={(values, bag) => {
           const user = userData.find(
             (u) =>
-              u.login === values.inputLogin &&
+              (u.login === values.inputLogin ||
+                u.email === values.inputLogin) &&
               u.password === values.inputPassword,
           );
 
@@ -75,7 +76,9 @@ export default function Login() {
                 className={styles.errorText}
               ></ErrorMessage>
             </div>
-            <button type="submit">Login</button>
+            <button type="submit" className={styles.button}>
+              Login
+            </button>
           </Form>
         )}
       </Formik>
