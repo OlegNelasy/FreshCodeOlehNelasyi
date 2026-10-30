@@ -7,6 +7,7 @@ import NotFound from "./../../page/NotFound";
 import Components from "./../../page/Components";
 import Component1 from "./../Component1";
 import Component2 from "./../Component2";
+import TaskManager from "./../../page/TaskManager";
 
 export default function App() {
   return (
@@ -23,6 +24,7 @@ export default function App() {
         </Route>
 
         <Route path="login" element={<Login />} />
+        <Route path="task-manager" element={<TaskManager />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>

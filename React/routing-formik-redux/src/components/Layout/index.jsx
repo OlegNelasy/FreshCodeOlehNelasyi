@@ -31,6 +31,11 @@ export default function Layout() {
                 Login
               </NavLink>
             </li>
+            <li>
+              <NavLink to="/task-manager" className={calcClassName}>
+                Task Manager
+              </NavLink>
+            </li>
           </ul>
         </nav>
       </header>
