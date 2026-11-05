@@ -1,21 +1,27 @@
+import { useEffect } from "react";
 import cn from "classnames";
 import { useDispatch, useSelector } from "react-redux";
 import {
   deleteTask,
   toggleTaskCompletion,
+  getTaskThunk,
 } from "./../../../store/slices/taskSlice";
-
 import styles from "./TaskList.module.scss";
 
 export default function TaskList({ activeFilter }) {
   const tasks = useSelector((state) => state.tasks.tasksList);
   const dispatch = useDispatch();
 
+  useEffect(() => {
+    dispatch(getTaskThunk());
+  }, []);
+
   const filteredTasks = tasks.filter((task) => {
     if (activeFilter === "active") return !task.completed;
     if (activeFilter === "completed") return task.completed;
     return true;
   });
+
   return (
     <ul className={styles.taskList}>
       {filteredTasks.map((task) => (
