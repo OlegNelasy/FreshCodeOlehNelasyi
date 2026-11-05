@@ -1,0 +1,39 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  text-align: center;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid gray;
+  border-radius: 4px;
+  outline: none;
+
+  &:focus {
+    border-color: black;
+  }
+
+  &.inputError {
+    border-color: red;
+  }
+}
+
+.inputContainer {
+  position: relative;
+  width: 100%;
+}
+
+.errorText {
+  position: absolute;
+  bottom: -7px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: red;
+  font-size: 14px;
+  background-color: white;
+  padding: 0 3px;
+  white-space: nowrap;
+}
