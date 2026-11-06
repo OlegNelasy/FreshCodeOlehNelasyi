@@ -1,11 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from './slices/counterSlice'
 import taskReducer from './slices/taskSlice';
+import geoReducer from './slices/geoSlice';
+import weatherReducer from './slices/weatherSlice';
 
 const store = configureStore({
     reducer: {
-        counter: counterReducer,
         tasks: taskReducer,
+        geo: geoReducer,
+        weather: weatherReducer,
     },
 });
 

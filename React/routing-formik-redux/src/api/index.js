@@ -2,31 +2,33 @@ import axios from 'axios';
 
 const axiosTaskInstance = axios.create({ baseURL: 'https://jsonplaceholder.typicode.com' });
 
-export const getTasks = (limit) => axiosTaskInstance.get(`/todos?_limit=${limit}`);
+export const getTasks = (limit) => axiosTaskInstance.get('/todos', {
+    params: { _limit: limit }
+});
 
-// axios.get('https://jsonplaceholder.typicode.com/todos?_limit=5')
-//     .then(data => console.log(data.data))
-//     .catch(err => console.log(err));
+const axiosGeoInstance = axios.create({
+    baseURL: 'https://api.bigdatacloud.net',
+    params: {
+        localityLanguage: 'ru'
+    }
+});
 
-// async function loadTask() {
-//     try {
-//         const data = await axios.get('https://jsonplaceholder.typicode.com/todos?_limit=5');
-//         console.log(data.data)
-//     } catch (err) {
-//         console.log(err);
+export const getGeoData = (lat, lon) => {
+    return axiosGeoInstance.get('/data/reverse-geocode-client', {
+        params: { latitude: lat, longitude: lon }
+    });
+};
 
-//     }
-// }
-// loadTask();
+const axiosWeatherInstance = axios.create({
+    baseURL: 'https://api.open-meteo.com',
+});
 
-// const axiosInstans = axios.create({
-//     baseURL: 'https://jsonplaceholder.typicode.com/todos'
-// });
-
-// axiosInstans.get('?_limit=5')
-//     .then(data => console.log(data.data))
-//     .catch(err => console.log(err));
-
-
-
-// 'https://jsonplaceholder.typicode.com/todos?_limit=5'
+export const getWeatherData = (lat, lon) => {
+    return axiosWeatherInstance.get('/v1/forecast', {
+        params: {
+            latitude: lat,
+            longitude: lon,
+            current_weather: true,
+        }
+    });
+};

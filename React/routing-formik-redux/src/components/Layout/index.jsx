@@ -1,44 +1,13 @@
-import { NavLink, Outlet } from "react-router-dom";
-import cs from "classnames";
-import styles from "./Layout.module.scss";
+import { Outlet } from "react-router-dom";
 
-const calcClassName = ({ isActive }) =>
-  cs(styles.link, { [styles.activeLink]: isActive });
+import MainHeader from "../MainHeader";
+
+import styles from "./Layout.module.scss";
 
 export default function Layout() {
   return (
     <div className={styles.layoutWrapper}>
-      <header className={styles.header}>
-        <nav>
-          <ul className={styles.mainMenu}>
-            <li>
-              <NavLink to="/" className={calcClassName}>
-                Home
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/about" className={calcClassName}>
-                About
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/components" className={calcClassName}>
-                Components
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/login" className={calcClassName}>
-                Login
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/task-manager" className={calcClassName}>
-                Task Manager
-              </NavLink>
-            </li>
-          </ul>
-        </nav>
-      </header>
+      <MainHeader />
 
       <main className={styles.content}>
         <Outlet />

@@ -1,4 +1,12 @@
+import { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  fetchCoordinatesThunk,
+  fetchCityThunk,
+  fetchCountryThunk,
+} from "../../store/slices/geoSlice";
 import { Routes, Route, Navigate } from "react-router-dom";
+
 import Layout from "./../Layout";
 import Home from "./../../page/Home";
 import About from "./../../page/About";
@@ -10,6 +18,22 @@ import Component2 from "./../Component2";
 import TaskManager from "./../../page/TaskManager";
 
 export default function App() {
+  const { lat, lon, cityStatus, countryStatus } = useSelector(
+    (state) => state.geo,
+  );
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchCoordinatesThunk());
+  }, [dispatch]);
+
+  useEffect(() => {
+    if (lat && lon) {
+      if (cityStatus === "idle") dispatch(fetchCityThunk());
+      if (countryStatus === "idle") dispatch(fetchCountryThunk());
+    }
+  }, [lat, lon]);
+
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
