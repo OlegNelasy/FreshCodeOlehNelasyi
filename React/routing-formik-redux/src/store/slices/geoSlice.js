@@ -39,8 +39,7 @@ export const fetchCityThunk = createAsyncThunk(
             const response = await getGeoData(lat, lon);
             const data = response.data;
 
-            let city = data.locality || data.city || "Город не найден";
-            return city.replace("ский район", "").replace(" район", "");
+            return data.locality || data.city || "Город не найден";
         } catch (error) {
             return thunkAPI.rejectWithValue("Ошибка при получении города");
         }

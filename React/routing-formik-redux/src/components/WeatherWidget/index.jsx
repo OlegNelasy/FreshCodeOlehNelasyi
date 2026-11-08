@@ -1,6 +1,10 @@
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { fetchCityThunk, fetchCountryThunk } from "../../store/slices/geoSlice";
+import {
+  fetchCityThunk,
+  fetchCountryThunk,
+  fetchCoordinatesThunk,
+} from "../../store/slices/geoSlice";
 import { fetchWeatherThunk } from "../../store/slices/weatherSlice";
 import styles from "./WeatherWidget.module.scss";
 
@@ -24,9 +28,13 @@ export default function WeatherWidget() {
   } = useSelector((state) => state.weather);
 
   useEffect(() => {
+    dispatch(fetchCoordinatesThunk());
+  }, [dispatch]);
+
+  useEffect(() => {
     if (lat && lon) {
-      // if (cityStatus === "idle") dispatch(fetchCityThunk());
-      // if (countryStatus === "idle") dispatch(fetchCountryThunk());
+      if (cityStatus === "idle") dispatch(fetchCityThunk());
+      if (countryStatus === "idle") dispatch(fetchCountryThunk());
 
       if (weatherStatus === "idle") {
         dispatch(fetchWeatherThunk());
